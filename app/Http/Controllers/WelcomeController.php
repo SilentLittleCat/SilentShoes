@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Debugbar;
+//use Debugbar;
 
 class WelcomeController extends Controller
 {
@@ -22,7 +22,7 @@ class WelcomeController extends Controller
         }
 
         foreach ($images as $key => $image) {
-        	Debugbar::info($image);
+        	//Debugbar::info($image);
         }
         
     	return view('welcome.index', [
