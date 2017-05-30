@@ -3,7 +3,7 @@
 ## About SilentShoes
 
 A web brand shoes website based on Larave
-l5.4 and semantic-ui
+l5.4 and semantic-ui.
 
 ## Snapshots
 
