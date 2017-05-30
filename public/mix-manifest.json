@@ -1,0 +1,8 @@
+{
+  "/js/app.js": "/js/app.js",
+  "/css/app.css": "/css/app.css",
+  "/css/styles.css": "/css/styles.css",
+  "/js/myPlugin.js": "/js/myPlugin.js",
+  "/three/build/three.js": "/three/build/three.js",
+  "/vendor/three/build/three.js": "/vendor/three/build/three.js"
+}

@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', ['uses' => 'WelcomeController@index', 'as' => 'welcome.index']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('shoes', 'ShoeController');
+
+Route::get('test', 'TestController@index');

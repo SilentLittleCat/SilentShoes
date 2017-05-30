@@ -1,0 +1,314 @@
+@import "styles_variables";
+
+#app-header {
+	> .menu {
+		height: $header-height;
+		padding: 0 30px !important;
+
+		> .item {
+			padding: 0;
+		} 
+
+		> .item:before {
+			width: 0;
+		}
+
+		> .item:first-child {
+			justify-content: flex-start;
+			cursor: pointer;
+		}
+
+		> .item:nth-child(3) {
+			justify-content: flex-end;
+		}
+	}
+}
+
+#indexLeftSidebar {
+	> .item {
+		padding: 40px;
+
+		> .menu {
+			> .item,
+			> .header {
+				padding: 20px 20px;
+			}
+		}
+	}
+
+	> .item:last-child {
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background-color: $index-left-sidebar-bg;
+
+		.button {
+			background-color: $index-left-sidebar-bg;
+			border-top: 1px solid white;
+			border-right: 1px solid white;
+			border-radius: 0;
+
+			&:hover {
+				background-color: darken($index-left-sidebar-bg, 80%);
+			}
+		}
+	}
+}
+
+#mainContent {
+	padding: $main-content-top-padding 20px 0 20px;
+	background-color: $main-content-bg;
+
+	> .grid {
+		.column {
+			overflow: hidden
+		}
+
+		.card {
+			box-shadow: none;
+			border-radius: 0px;
+			position: relative;
+			background-color: $main-content-bg;
+
+			.content {
+				text-align: center;
+				background-color: $main-content-bg;
+				border-top: 0px;
+				position: absolute;
+				bottom: -50px;
+				opacity: 0;
+				left: 20%;
+			}
+		}
+	}
+
+	> .grid-layout {
+		padding-top: 150px;
+		> .column .card {
+			margin-top: -80px;
+		}
+	}
+
+	> .block-layout {
+		.content {
+			left: 35% !important;
+			position: absolute;
+			bottom: -50px;
+		}
+	}
+
+	> .list-layout {
+		margin-top: -350px;
+		> .column .card {
+			margin-top: -100px;
+
+			.content {
+				left: 40% !important;
+				position: absolute;
+				bottom: -50px;
+			}
+		}
+	}
+}
+
+#bottomMenu {
+	> .menu {
+		background-color: $bottom-menu-bg;
+		border-width: 0;
+		box-shadow: none;
+
+		.item {
+			height: 60px;
+			width: 60px;
+			padding: 18px;
+			border-top: 1px solid white;
+			border-right: 1px solid white;
+			background-color: $bottom-item-bg;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $bottom-item-hover-bg;
+			}
+
+			i {
+				opacity: 0.4;
+			}
+		}
+
+		.active.item {
+			&:hover {
+				background-color: $bottom-item-bg;
+			}
+
+			i {
+				opacity: 1;
+			}
+		}
+
+		.item:not(.active) {
+			overflow: hidden;
+
+			i, span {
+				position: absolute;
+				bottom: 38%;
+				left: 38%;
+			}
+		}
+
+		.right .item {
+			border-right: 0px solid white;
+			border-left: 1px solid white;
+			text-align: center;
+			padding: 20px 25px;
+			width: 100px;
+
+			span {
+				left: 30%;
+			}
+		}
+
+		.item:before {
+			width: 0;
+		}
+	}
+}
+
+#showShoesContent {
+	> .grid {
+		> .twelve {
+			padding-top: 200px;
+
+			.column {
+				.card {
+					overflow: hidden;
+					border-width: 0px;
+					box-shadow: none;
+					border-radius: 0;
+
+					.image {
+						position: relative;
+						margin: -400px 0 -200px 0;
+					}
+				}
+			}
+		}
+
+		> .four {
+			position: fixed;
+			top: 150px;
+			right: 0;
+
+			.card {
+				border-width: 0px;
+				box-shadow: none;
+				border-radius: 0;
+
+				.price {
+					margin-bottom: 15px;
+				}
+			}
+
+			.content:nth-child(2) {
+				.segment {
+					border-width: 0px;
+					border-radius: 0;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+
+	> .bottom.menu {
+		> .item {
+			width: 60px;
+			height: 60px;
+
+			i {
+				margin: 10px;
+			}
+		}
+
+		> .right {
+			.item {
+				padding: 0;
+
+				.buttons {
+					height: 100%;
+					width: 315px;
+
+					.button {
+						width: 158px;
+						padding: 21px 21px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#showImageModal {
+	height: 550px;
+	.image.content {
+		overflow: hidden;
+		position: relative;
+
+		.image {
+			position: relative;
+			bottom: 250px;
+		}
+	}
+}
+
+#filterModal {
+	> .close.icon {
+		color: white;
+		margin-top: -50px;
+	}
+
+	> .content {
+		margin-left: 50px;
+		.grid .column {
+			padding: 14px 30px !important;
+		}
+	}
+}
+
+#rightSidebar {
+	background-color: #DDD;
+
+	.item:first-child {
+		padding: 0px;
+
+		.ui.button {
+			border-radius: 0px;
+		}
+	}
+
+	.vertical.menu {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		border-width: 0px;
+
+		.item {
+			margin: 0;
+			padding: 0;
+			border-width: 0px;
+
+			.ui.button {
+				background-color: white;
+				border-width: 0;
+				border-radius: 0;
+			}
+		}
+
+		.item:nth-child(2) {
+			.ui.button {
+				background-color: black;
+				color: white;
+			}
+		}
+	}
+}
